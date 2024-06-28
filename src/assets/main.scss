@@ -1,0 +1,14 @@
+@import './base.scss';
+
+#app {
+  margin: 0;
+  font-weight: 300;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: $secondary;
+  transition: 0.4s;
+}
+
