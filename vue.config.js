@@ -5,9 +5,9 @@ module.exports = defineConfig({
   pages: {
     'index': {
       // entry for the page
-      entry: './src/pages/home/main.js',
+      entry: 'main.js',
       // the source template
-      template: 'public/index.html',
+      template: 'index.html',
       // output as dist/index.html
       filename: 'home.html',
       // when using title option,
@@ -18,11 +18,18 @@ module.exports = defineConfig({
       chunks: ['chunk-vendors', 'chunk-common', 'index']
     },
     'robots': {
-      entry: './src/pages/robots/main.js',
-      template: 'public/index.html',
+      entry: 'robots.js',
+      template: 'index.html',
       filename: 'robots.html',
       title: 'Robots',
       chunks: ['chunk-vendors', 'chunk-common', 'robots']
     },
+    // 'sponsors': {
+    //   entry: 'sponsors.js',
+    //   template: 'index.html',
+    //   filename: 'sponsors.html',
+    //   title: 'Sponsors',
+    //   chunks: ['chunk-vendors', 'chunk-common', 'sponsors']
+    // },
   }
 })

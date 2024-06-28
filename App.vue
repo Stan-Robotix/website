@@ -1,14 +1,14 @@
 <script setup>
-import BaseHeader from '../../components/BaseHeader.vue'
+import BaseHeader from './src/components/BaseHeader.vue'
 </script>
 
 <template>
 
 
-  <BaseHeader />
+  <BaseHeader/>
 
   <main>
-    <h1>ROBOTS</h1>
+    <h1>Nothing</h1>
   </main>
 </template>
 

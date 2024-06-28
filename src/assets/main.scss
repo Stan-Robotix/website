@@ -1,7 +1,7 @@
 @import './base.scss';
 
 #app {
-  margin: 0;
+  margin: 0 auto;
   font-weight: 300;
 }
 
@@ -10,5 +10,9 @@ a,
   text-decoration: none;
   color: $secondary;
   transition: 0.4s;
+}
+
+h1 {
+  text-align: center;
 }
 

@@ -1,5 +1,7 @@
 # vue-deploy
 
+VueJS project using Vue Cli for deployment and Vite for preview.
+
 ## Project setup
 ```
 npm install
@@ -7,7 +9,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run dev
 ```
 
 ### Compiles and minifies for production
@@ -15,10 +17,16 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
+### To deploy to Github Pages
 ```
-npm run lint
+npm run deploy
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Adding a new page
+
+To add a page :
+1. create 3 files in the root, `page-name.html`, `page-name.js` and `page-name.vue`. Link them appropriately.
+2. add them in `vite.config.js`
+3. add them in `vue.congif.js`
+4. don't forget to update `BaseNav.vue` if needed
+

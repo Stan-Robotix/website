@@ -1,8 +1,14 @@
 <script>
 export default {
   methods: {
+    getBasePath() {
+      const pathArray = window.location.pathname.split('/');
+      // Supposons que le chemin de base soit le nom du dépôt, ici 'vue-deploy'
+      return `/${pathArray[1]}`;
+    },
     isActive(path) {
-      return window.location.pathname === path;
+      const basePath = this.getBasePath();
+      return window.location.pathname === `${basePath}${path}`;
     }
   }
 };
@@ -13,8 +19,6 @@ export default {
       <li>
         <a :class="{ active: isActive('/home.html') }" href="home.html">Home</a>
       </li>
-      <li><a :class="{ active: isActive('/sponsors.html') }" href="sponsors.html">Sponsors</a></li>
-      <li><a :class="{ active: isActive('/robots.html') }" href="robots.html">Robots</a></li>
       <li>
         <p>Team <i class="fa-solid fa-caret-down"></i></p>
         <ul>
@@ -29,7 +33,9 @@ export default {
           </a>
         </ul>
       </li>
+      <li><a :class="{ active: isActive('/robots.html') }" href="robots.html">Robots</a></li>
       <li><a :class="{ active: isActive('/outreach.html') }" href="#">Outreach</a></li>
+      <li><a :class="{ active: isActive('/sponsors.html') }" href="sponsors.html">Sponsors</a></li>
     </ul>
   </nav>
 </template>
@@ -67,7 +73,9 @@ nav {
 
     ul {
       height: auto;
-      background: rgba($secondary, $alpha: 0.05);
+      background: rgba($secondary, $alpha: 0.1);
+      padding-top: 40px;
+      transform: translateY(-40px);
       border-radius: 10px;
       width: 100%;
       position: absolute;
@@ -120,6 +128,7 @@ nav {
     right:25px;
     top:8px;
   }
+
 }
 
 ul li:hover>ul,
