@@ -8,7 +8,13 @@ export default {
     },
     isActive(path) {
       const basePath = this.getBasePath();
-      return window.location.pathname === `${basePath}${path}`;
+      const currentPath = window.location.pathname;
+
+      // Vérifiez si le chemin est la racine et que le path spécifié est '/home.html'
+      if (currentPath === `${basePath}/` && path === '/home.html') {
+        return true;
+      }
+      return currentPath === `${basePath}${path}`;
     }
   }
 };

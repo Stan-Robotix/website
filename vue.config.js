@@ -1,11 +1,11 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: process.env.NODE_ENV === "production" ? "/vue-deploy/" : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "/vue-deploy/home.html" : "/",
   pages: {
     'index': {
       // entry for the page
-      entry: 'main.js',
+      entry: 'home.js',
       // the source template
       template: 'index.html',
       // output as dist/index.html
