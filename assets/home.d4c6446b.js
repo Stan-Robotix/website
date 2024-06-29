@@ -1,0 +1,1 @@
+import{c as a,a as o,F as s,b as e,o as t,B as n,d as c}from"./BaseHeader.3f5ce5ed.js";const r=e("main",null,[e("h1",null,"Home")],-1),m={__name:"home-page",setup(p){return(_,l)=>(t(),a(s,null,[o(n),r],64))}};c(m).mount("#app");
