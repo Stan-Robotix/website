@@ -23,25 +23,25 @@ export default {
   <nav role="navigation" class="horinav">
     <ul>
       <li>
-        <a :class="{ active: isActive('/home.html') }" href="home.html">Home</a>
+        <a :class="{ active: isActive('/home.html') }" href="../">Home</a>
       </li>
       <li>
         <p>Team <i class="fa-solid fa-caret-down"></i></p>
         <ul>
-          <a :class="{ active: isActive('/about.html') }" href="#">
+          <a :class="{ active: isActive('/about/') }" href="#">
             <li>About</li>
           </a>
-          <a :class="{ active: isActive('/history.html') }" href="#">
+          <a :class="{ active: isActive('/history/') }" href="#">
             <li>History</li>
           </a>
-          <a :class="{ active: isActive('/join.html') }" href="#">
+          <a :class="{ active: isActive('/join/') }" href="#">
             <li>Join</li>
           </a>
         </ul>
       </li>
-      <li><a :class="{ active: isActive('/robots.html') }" href="robots.html">Robots</a></li>
-      <li><a :class="{ active: isActive('/outreach.html') }" href="#">Outreach</a></li>
-      <li><a :class="{ active: isActive('/sponsors.html') }" href="sponsors.html">Sponsors</a></li>
+      <li><a :class="{ active: isActive('/robots/') }" href="./robots/">Robots</a></li>
+      <li><a :class="{ active: isActive('/outreach/') }" href="./outreach/">Outreach</a></li>
+      <li><a :class="{ active: isActive('/sponsors/') }" href="./sponsors/">Sponsors</a></li>
     </ul>
   </nav>
 </template>

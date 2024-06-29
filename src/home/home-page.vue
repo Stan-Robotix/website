@@ -1,6 +1,5 @@
 <script setup>
-import BaseHeader from './src/components/BaseHeader.vue'
-
+import BaseHeader from '../../src/components/BaseHeader.vue'
 </script>
 
 <template>
@@ -9,7 +8,7 @@ import BaseHeader from './src/components/BaseHeader.vue'
   <BaseHeader />
 
   <main>
-    <h1>Robots</h1>
+    <h1>Home</h1>
   </main>
 </template>
 
