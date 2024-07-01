@@ -9,6 +9,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: resolve(__dirname, "index.html"),
+        outreach: resolve(__dirname, "outreach/index.html"),
         robots: resolve(__dirname, "robots/index.html"),
       },
     },
