@@ -1,16 +1,17 @@
 <script setup>
 import BaseHeader from '../../src/components/BaseHeader.vue'
-
 </script>
 
 <template>
-
-
-  <BaseHeader />
+  
+  <BaseHeader/>
 
   <main>
     <h1>Robots</h1>
   </main>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+@import "../assets/base.scss";
+
+</style>

@@ -1,9 +1,11 @@
 <script>
 export default {
+  // FONCTIONS JAVASCRIPT QUI PERMETTENT DE DÉTECTER SI ON EST SUR UNE CERTAINE PAGE
+  // but : highlight le bouton de la page sur lequel on se trouve
   methods: {
     getBasePath() {
       const pathArray = window.location.pathname.split('/');
-      // Supposons que le chemin de base soit le nom du dépôt, ici 'vue-deploy'
+      // Supposons que le chemin de base soit le nom du dépôt, ici 'website'
       return `/${pathArray[1]}`;
     },
     isActive(path) {
@@ -39,9 +41,9 @@ export default {
           </a>
         </ul>
       </li>
-      <li><a :class="{ active: isActive('/robots/') }" href="./robots/">Robots</a></li>
-      <li><a :class="{ active: isActive('/outreach/') }" href="./outreach/">Outreach</a></li>
-      <li><a :class="{ active: isActive('/sponsors/') }" href="./sponsors/">Sponsors</a></li>
+      <li><a :class="{ active: isActive('/robots/') }" href="/website/robots/">Robots</a></li>
+      <li><a :class="{ active: isActive('/outreach/') }" href="/website/outreach/">Outreach</a></li>
+      <li><a :class="{ active: isActive('/sponsors/') }" href="/website/sponsors/">Sponsors</a></li>
     </ul>
   </nav>
 </template>
