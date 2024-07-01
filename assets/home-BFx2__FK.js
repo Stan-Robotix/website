@@ -1,0 +1,1 @@
+import{_ as o,o as s,c as t,a as c,F as p,B as _,p as n,b as r,d as a,e as d}from"./BaseHeader-DeUk72XD.js";const m=e=>(n("data-v-a0121f11"),e=e(),r(),e),l=m(()=>a("main",null,[a("h1",null,"Home")],-1)),u={__name:"home-page",setup(e){return(f,i)=>(s(),t(p,null,[c(_),l],64))}},h=o(u,[["__scopeId","data-v-a0121f11"]]);d(h).mount("#app");
