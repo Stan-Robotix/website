@@ -13,5 +13,5 @@ export default defineConfig({
       },
     },
   },
-  base: "/vue-deploy/",
+  base: "/website/",
 });

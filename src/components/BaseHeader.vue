@@ -4,7 +4,8 @@ import BaseNav from './BaseNav.vue'
 
 <template>
   <header>
-    <img alt="logo" class="logo" src="../components/icons/Logotix-Bluetext.svg" height="100px" />
+    <a href="../"><img alt="logo" class="logo" src="../components/icons/Logotix-Bluetext.svg" height="100px"/></a>
+    
     <div class="icons">
       <a href=""><i class="fa-brands fa-instagram"></i></a>
       <a href=""><i class="fa-brands fa-facebook"></i></a>
@@ -32,6 +33,10 @@ header *:last-child {
   grid-column: 4;
 }
 
+header a {
+  height:100px;
+}
+
 .icons {
   display: flex;
   justify-content: center;
@@ -41,11 +46,12 @@ header *:last-child {
 }
 
 .icons a {
-  color: rgba($text, 0.8);
+  height: auto;
+  color: rgba($text, 0.9);
 }
 
 .icons a:hover {
-  color: $primary;
+  color: rgba($secondary, $alpha: 0.6);
 }
 
 h1 {
