@@ -25,7 +25,7 @@ export default {
   <nav role="navigation" class="horinav">
     <ul>
       <li>
-        <a :class="{ active: isActive('/home.html') }" href="../">Home</a>
+        <a :class="{ active: isActive('/home.html') }" href="/website/">Home</a>
       </li>
       <li>
         <p>Team <i class="fa-solid fa-caret-down"></i></p>
