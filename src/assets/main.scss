@@ -14,5 +14,10 @@ a,
 
 h1 {
   text-align: center;
+  font-size: max(32px, 10vh);
+  line-height: calc(max(32px, 10vh) + 15px);
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
 }
 
