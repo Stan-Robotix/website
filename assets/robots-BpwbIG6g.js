@@ -1,0 +1,1 @@
+import{_ as o,o as s,c as t,e as p,F as c,B as _,p as n,b as r,d as a,g as d}from"./BaseHeader-D1Fe5s0p.js";const l=e=>(n("data-v-0f8284b1"),e=e(),r(),e),m=l(()=>a("main",null,[a("h1",null,"Robots")],-1)),u={__name:"Robots-page",setup(e){return(f,h)=>(s(),t(c,null,[p(_),m],64))}},b=o(u,[["__scopeId","data-v-0f8284b1"]]);d(b).mount("#app");
