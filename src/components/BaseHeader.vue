@@ -4,7 +4,7 @@ import BaseNav from './BaseNav.vue'
 
 <template>
   <header>
-    <a href="/website/"><img alt="logo" class="logo" src="../components/icons/Logotix-Bluetext.svg" height="100px"/></a>
+    <a href="/website/"><img alt="logo" class="logo" src="../components/icons/Nombrotix.svg" height="100px"/></a>
     
     <div class="icons">
       <a href=""><i class="fa-brands fa-instagram"></i></a>
@@ -27,6 +27,7 @@ header {
 
   padding: 0 20px;
   height: 120px;
+  margin-bottom: 10px;
 }
 
 header *:last-child {
@@ -35,18 +36,25 @@ header *:last-child {
 
 header a {
   height:100px;
+
+  svg {
+    color: blue;
+  }
 }
 
 .icons {
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow:column ;
-  font-size: 18px;
+  flex-wrap: wrap;
+  font-size: 25px;
 }
 
 .icons a {
   height: auto;
+  aspect-ratio: 1/1;
   color: rgba($text, 0.9);
 }
 

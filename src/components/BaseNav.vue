@@ -55,8 +55,8 @@ nav {
   display: block;
   width: max-content;
   height: 40px;
-  font-size: 120%;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 400;
 
   ul {
     height: 100%;
@@ -64,10 +64,8 @@ nav {
     list-style: none;
     margin: 0;
     padding-left: 0;
-    font-size: 120%;
     display: flex;
     gap: 10px;
-    font-size: 90%;
   }
 
   li {
@@ -81,7 +79,7 @@ nav {
 
     ul {
       height: auto;
-      background: rgba($secondary, $alpha: 0.1);
+      background: $grey;
       padding-top: 40px;
       transform: translateY(-40px);
       border-radius: 10px;
@@ -118,6 +116,8 @@ nav {
     justify-content: center;
     align-items: center;
     outline: 0px solid $primary;
+    position: relative;
+    z-index: 2;
   }
 
   a:hover {
@@ -134,7 +134,7 @@ nav {
   i {
     position: absolute;
     right:25px;
-    top:8px;
+    top:11px;
   }
 
 }
