@@ -50,16 +50,16 @@ h5 {
   margin: 20px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   section {
-    width: calc(100vw - 8px);
+    width: 100vw;
     padding: 0;
     margin: 0;
   }
 
   main {
     width: 100%;
-    min-height: 50vh;
+    min-height: 80vw;
     background-size: cover;
     background-attachment: local;
   }

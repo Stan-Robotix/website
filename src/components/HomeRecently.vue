@@ -67,7 +67,7 @@ main {
 
 
 .grid {
-  width: max(600px, 60vw);
+  width: max(880px, 60vw);
   display: grid;
   margin: 20px auto;
   grid-template-columns: 1fr 1fr 1fr;
@@ -88,6 +88,8 @@ main {
 
   >div {
     width: auto;
+    max-width: 500px;
+    min-width: 200px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
     height: min-content;
@@ -118,6 +120,7 @@ main {
 
   a.img {
     background-color: black;
+    width: 100%;
     position: relative;
     overflow: hidden;
     display: inline-grid;
@@ -198,10 +201,11 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width:90vw;
   }
 }

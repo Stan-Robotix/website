@@ -291,7 +291,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 500px) { 
+@media screen and (max-width: 900px) { 
   footer {
     display: block;
   }
@@ -301,7 +301,8 @@ footer {
     position: absolute;
   }
   .contact {
-    margin:30px 0px 0px;
+    margin:30px auto 0px;
+    width: auto;
   }
 }
 

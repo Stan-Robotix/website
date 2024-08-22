@@ -38,7 +38,7 @@ main>h2 {
   }
 }
 
-@media screen and (max-width: 500px) { 
+@media screen and (max-width: 900px) { 
   main {
     width:90vw;
   }

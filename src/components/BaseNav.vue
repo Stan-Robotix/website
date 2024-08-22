@@ -160,7 +160,7 @@ ul li ul:focus {
   transition: all 1s ease;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
 
   .openButton {
     cursor: pointer;
