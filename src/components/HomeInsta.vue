@@ -23,7 +23,7 @@ section {
 
 main {
   padding: 20px;
-  width:80vw;
+  width:60vw;
   margin:auto;
 }
 
