@@ -197,4 +197,12 @@ a:hover {
     margin-left: calc(100% - 105px);
   }
 }
+
+@media screen and (max-width: 500px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    width:90vw;
+  }
+}
 </style>

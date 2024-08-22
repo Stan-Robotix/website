@@ -290,4 +290,19 @@ footer {
     }
   }
 }
+
+@media screen and (max-width: 500px) { 
+  footer {
+    display: block;
+  }
+  nav {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+  }
+  .contact {
+    margin:30px 0px 0px;
+  }
+}
+
 </style>

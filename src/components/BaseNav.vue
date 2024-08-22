@@ -17,12 +17,21 @@ export default {
         return true;
       }
       return currentPath === `${basePath}${path}`;
+    },
+
+    openNav() {
+      this.$refs.nav.style.transform = "translateX(0px)";
+    },
+    closeNav() {
+      this.$refs.nav.style.transform = "translateX(110%)";
     }
   }
 };
 </script>
 <template>
-  <nav role="navigation" class="horinav">
+  <a href="#" @click="openNav()" class="openButton"><i class="fa-solid fa-bars"></i></a>
+  <nav role="navigation" ref="nav">
+    <a href="#" @click="closeNav()" class="closeButton"><i class="fa-solid fa-xmark"></i></a>
     <ul>
       <li>
         <a :class="{ active: isActive('/home.html') }" href="/website/">Home</a>
@@ -51,12 +60,22 @@ export default {
 <style scoped lang="scss">
 @import "../assets/base.scss";
 
+.openButton {
+  display: none;
+}
+
 nav {
+  transition: all 0.5s ease;
+
   display: block;
   width: max-content;
   height: 40px;
   font-size: 18px;
   font-weight: 400;
+
+  .closeButton {
+    display: none;
+  }
 
   ul {
     height: 100%;
@@ -66,6 +85,40 @@ nav {
     padding-left: 0;
     display: flex;
     gap: 10px;
+
+    a,
+    p {
+      margin: 0;
+      text-decoration: none;
+      color: inherit;
+      transition-duration: 0.5s;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: 0px solid $primary;
+      position: relative;
+      z-index: 2;
+    }
+
+    i {
+      position: absolute;
+      right: 25px;
+      top: 11px;
+    }
+
+    a:hover {
+      transition: all 0.5s ease;
+      background-color: rgba($secondary, $alpha: 0.2);
+      outline: 1px solid $secondary;
+    }
+
+    a.active {
+      color: white;
+      background-color: $secondary;
+    }
   }
 
   li {
@@ -89,54 +142,14 @@ nav {
       left: 0;
       display: none;
 
-      a:hover {
-        background-color: rgba($secondary, $alpha: 0.2);
-      }
-
       li {
         margin-left: 0px;
         clear: both;
         width: 90%;
         padding: 0.5em;
       }
-
     }
   }
-
-  a,
-  p {
-    margin: 0;
-    text-decoration: none;
-    color: inherit;
-    transition-duration: 0.5s;
-    border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: 0px solid $primary;
-    position: relative;
-    z-index: 2;
-  }
-
-  a:hover {
-    transition: all 0.5s ease;
-    background-color: rgba($secondary, $alpha: 0.2);
-    outline: 1px solid $secondary;
-  }
-
-  a.active {
-    color: white;
-    background-color: $secondary;
-  }
-  
-  i {
-    position: absolute;
-    right:25px;
-    top:11px;
-  }
-
 }
 
 ul li:hover>ul,
@@ -148,15 +161,87 @@ ul li ul:focus {
 }
 
 @media screen and (max-width: 500px) {
-  .horinav {
-    margin: auto;
-    clear: both;
+
+  .openButton {
+    display: flex;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background-color: $background;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    justify-content: center;
+    align-items: center;
   }
 
-  header h2 {
-    text-align: center;
-    height: min-content;
-    margin-left: auto;
+  nav {
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding: 8px 20px;
+    background-color: $background;
+    z-index: 3;
+    transform: translateX(110%);
+
+    .closeButton {
+      display: block;
+      transform: translateX(80px);
+      height: min-content;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+
+      li {
+        width: 100%;
+        height: max-content;
+        text-align: center;
+        margin: 5px 0px;
+
+        ul {
+          height: max-content;
+          padding: 0;
+          display: block;
+          position: relative;
+          transform: translate(0, 0);
+          background-color: transparent;
+          font-size: 90%;
+          color: $secondary;
+
+          li {
+            padding: 0;
+            margin: 0;
+          }
+        }
+
+        a {
+          padding: 3px 3px;
+        }
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      p {
+        height: fit-content;
+        transform: translateX(-6px);
+        margin-bottom: 10px;
+      }
+
+      i {
+        transform: translate(24px, -7px);
+      }
+    }
+
   }
 }
 </style>

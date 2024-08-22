@@ -15,9 +15,9 @@
 @import "../assets/base.scss";
 
 section {
-  width:98vw;
+  width: 98vw;
   height: 100%;
-  padding:20px;
+  padding: 20px;
   background: linear-gradient($primary 50%, rgba($text, $alpha: 0.3) 50%, $background 52%);
 }
 
@@ -38,7 +38,7 @@ main {
   flex-flow: row-reverse;
   align-items: flex-end;
   border-radius: 10px;
-  box-shadow: 0px 10px 12px rgba($text, $alpha: 0.4) ;
+  box-shadow: 0px 10px 12px rgba($text, $alpha: 0.4);
 }
 
 h5 {
@@ -48,5 +48,25 @@ h5 {
   display: inline;
   font-size: 16px;
   margin: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  section {
+    width: calc(100vw - 8px);
+    padding: 0;
+    margin: 0;
+  }
+
+  main {
+    width: 100%;
+    min-height: 50vh;
+    background-size: cover;
+    background-attachment: local;
+  }
+
+  h5 {
+    font-size: 14px;
+    margin: 10px;
+  }
 }
 </style>

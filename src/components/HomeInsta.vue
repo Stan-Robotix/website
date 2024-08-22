@@ -17,10 +17,6 @@
 <style scoped lang="scss">
 @import "../assets/base.scss";
 
-section {
-
-}
-
 main {
   padding: 20px;
   width:60vw;
@@ -39,6 +35,12 @@ main>h2 {
 
   i {
     color:$accent;
+  }
+}
+
+@media screen and (max-width: 500px) { 
+  main {
+    width:90vw;
   }
 }
 
