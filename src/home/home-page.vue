@@ -1,5 +1,6 @@
 <script setup>
 import BaseHeader from '../../src/components/BaseHeader.vue'
+import BaseFooter from '../../src/components/BaseFooter.vue'
 import HomeRecently from '../components/HomeRecently.vue';
 import HomePhoto from '../components/HomePhoto.vue';
 import HomeInstaFeed from '../components/HomeInsta.vue';
@@ -18,6 +19,7 @@ import HomeInstaFeed from '../components/HomeInsta.vue';
     <HomeInstaFeed/>
     
   </main>
+  <BaseFooter/>
 </template>
 
 <style scoped lang="scss">
