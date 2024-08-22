@@ -114,12 +114,12 @@ footer {
   a {
     grid-column: 1;
     grid-row: 1/3;
-    width:90%;
+    width: 90%;
     align-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:40px;
+    gap: min(40px, 4vw);
 
     img {
       transition: all 0.5s ease;
@@ -127,9 +127,10 @@ footer {
 
     div {
       h1 {
-        font-size:32px;
+        font-size: 32px;
         line-height: 1.5;
-        color:$text;
+        color: $text;
+
         span {
           background-color: $accent;
           border-radius: 8vh;
@@ -291,19 +292,40 @@ footer {
   }
 }
 
-@media screen and (max-width: 900px) { 
+@media screen and (max-width: 900px) {
   footer {
     display: block;
+
+    nav {
+      display: none;
+      visibility: hidden;
+    }
+
+    a {
+      width: auto;
+
+      div {
+        h1 {
+          font-size: 28px;
+          span {
+            padding: 5px 0.3em;
+          }
+        }
+      }
+    }
   }
-  nav {
-    display: none;
-    visibility: hidden;
-    position: absolute;
-  }
+
   .contact {
-    margin:30px auto 0px;
+    margin: 30px auto 0px;
     width: auto;
+
+    .icons {
+      width: auto;
+
+      a {
+        width:60px;
+      }
+    }
   }
 }
-
 </style>
