@@ -29,9 +29,9 @@ export default {
 };
 </script>
 <template>
-  <a href="#" @click="openNav()" class="openButton"><i class="fa-solid fa-bars"></i></a>
+  <a @click="openNav()" class="openButton"><i class="fa-solid fa-bars"></i></a>
   <nav role="navigation" ref="nav">
-    <a href="#" @click="closeNav()" class="closeButton"><i class="fa-solid fa-xmark"></i></a>
+    <a @click="closeNav()" class="closeButton"><i class="fa-solid fa-xmark"></i></a>
     <ul>
       <li>
         <a :class="{ active: isActive('/home.html') }" href="/website/">Home</a>
@@ -163,6 +163,7 @@ ul li ul:focus {
 @media screen and (max-width: 500px) {
 
   .openButton {
+    cursor: pointer;
     display: flex;
     position: fixed;
     top: 10px;
@@ -175,6 +176,7 @@ ul li ul:focus {
 
     justify-content: center;
     align-items: center;
+    z-index: 3;
   }
 
   nav {
@@ -188,6 +190,7 @@ ul li ul:focus {
     transform: translateX(110%);
 
     .closeButton {
+      cursor: pointer;
       display: block;
       transform: translateX(80px);
       height: min-content;
