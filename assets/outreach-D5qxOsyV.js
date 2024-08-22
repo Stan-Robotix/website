@@ -1,1 +1,0 @@
-import{_ as c,o as s,c as t,e as o,F as p,B as r,p as _,b as n,d as a,g as d}from"./BaseHeader-CyPM6CqH.js";const u=e=>(_("data-v-f473cb69"),e=e(),n(),e),l=u(()=>a("main",null,[a("h1",null,"Outreach")],-1)),m={__name:"outreach-page",setup(e){return(f,i)=>(s(),t(p,null,[o(r),l],64))}},h=c(m,[["__scopeId","data-v-f473cb69"]]);d(h).mount("#app");
