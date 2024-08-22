@@ -24,10 +24,15 @@ export default {
 
 <template>
   <footer>
-    <a href="/website/"><img alt="logo" class="logo" src="../components/icons/Logotix-Bluetext.svg"
-        height="150px" /></a>
+    <a href="/website/">
+      <img alt="logo" class="logo" src="../components/icons/Logotix-Bluetext.svg" height="150px" />
+      <div>
+        <h1>Stan <span>Robotix</span></h1>
+        <h3>Team 6622</h3>
+      </div>
+    </a>
 
-      <!-- TODO-Dev : update links when pages are created -->
+    <!-- TODO-Dev : update links when pages are created -->
     <nav role="navigation">
       <ul>
         <li>
@@ -71,7 +76,8 @@ export default {
 
   </footer>
 
-  <h5>View site source on <a href="https://github.com/Stan-Robotix/website" target=”_blank”>Github <i class="fa-brands fa-github"></i></a></h5>
+  <h5>View site source on <a href="https://github.com/Stan-Robotix/website" target=”_blank”>Github <i
+        class="fa-brands fa-github"></i></a></h5>
 </template>
 
 <style scoped lang="scss">
@@ -100,7 +106,7 @@ footer {
   padding: 25px;
   margin: 25px 0px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 3fr;
   grid-template-rows: max-content max-content;
   justify-items: center;
   align-items: start;
@@ -108,10 +114,36 @@ footer {
   a {
     grid-column: 1;
     grid-row: 1/3;
+    width:90%;
     align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:40px;
 
     img {
       transition: all 0.5s ease;
+    }
+
+    div {
+      h1 {
+        font-size:32px;
+        line-height: 1.5;
+        color:$text;
+        span {
+          background-color: $accent;
+          border-radius: 8vh;
+          padding: 5px 0.6em;
+          color: white;
+        }
+      }
+
+      h3 {
+        text-align: center;
+        font-weight: 300;
+        font-size: 18px;
+        margin: 5px;
+      }
     }
   }
 
@@ -123,7 +155,9 @@ footer {
   nav {
     display: block;
     width: max-content;
-    height: 140px;
+    height: 150px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 
     ul {
       font-size: 14px;
@@ -212,14 +246,14 @@ footer {
 
   .icons {
     width: 400px;
-    height: 100px;
+    height: 40px;
     margin: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-flow: row;
     flex-wrap: wrap;
-    font-size: 28px;
+    font-size: 24px;
     transition: all 0.5s ease;
 
     span {
@@ -228,8 +262,8 @@ footer {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 45px;
-      height: 45px;
+      width: 40px;
+      height: 40px;
       outline: 1px solid transparent;
     }
 
