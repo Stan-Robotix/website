@@ -23,70 +23,157 @@ export default {
 </script>
 
 <template>
-  <footer>
-    <a href="/website/">
-      <img alt="logo" class="logo" src="../components/icons/Logotix-Bluetext.svg" height="150px" />
-      <div>
-        <h1>Stan <span>Robotix</span></h1>
-        <h3>Team 6622</h3>
+  <main>
+
+
+    <footer>
+      <a href="/website/">
+        <img alt="logo" class="logo" src="../components/icons/Logotix-Bluetext.svg" height="150px" />
+        <div>
+          <h1>Stan <span>Robotix</span></h1>
+          <h3>Team 6622</h3>
+        </div>
+      </a>
+
+      <!-- TODO-Dev : update links when pages are created -->
+      <nav role="navigation">
+        <ul>
+          <li>
+            <a :class="{ active: isActive('/home.html') }" href="/website/">Home</a>
+          </li>
+          <li>
+            <p>Team <i class="fa-solid fa-caret-down"></i></p>
+            <ul>
+              <a :class="{ active: isActive('/about/') }" href="#">
+                <li>About</li>
+              </a>
+              <a :class="{ active: isActive('/history/') }" href="#">
+                <li>History</li>
+              </a>
+              <a :class="{ active: isActive('/join/') }" href="#">
+                <li>Join</li>
+              </a>
+            </ul>
+          </li>
+          <li><a :class="{ active: isActive('/robots/') }" href="/website/robots/">Robots</a></li>
+          <li><a :class="{ active: isActive('/outreach/') }" href="/website/outreach/">Outreach</a></li>
+          <li><a :class="{ active: isActive('/sponsors/') }" href="/website/sponsors/">Sponsors</a></li>
+        </ul>
+      </nav>
+
+      <!-- TODO-Content : add links -->
+      <div class="contact">
+        <div class="icons">
+          <a href="" id="insta" target=”_blank”><span><i class="fa-brands fa-instagram"></i>
+            </span></a>
+          <a href="" id="linke" target=”_blank”><span><i class="fa-brands fa-linkedin-in"></i>
+            </span></a>
+          <a href="" id="fb" target=”_blank”><span><i class="fa-brands fa-facebook-f"></i>
+            </span></a>
+          <a href="" id="linke" target=”_blank”><span><i class="fa-brands fa-github"></i>
+            </span></a>
+          <a href="" id="mail" target=”_blank”><span><i class="fa-regular fa-envelope"></i>
+            </span></a>
+        </div>
       </div>
-    </a>
 
-    <!-- TODO-Dev : update links when pages are created -->
-    <nav role="navigation">
-      <ul>
-        <li>
-          <a :class="{ active: isActive('/home.html') }" href="/website/">Home</a>
-        </li>
-        <li>
-          <p>Team <i class="fa-solid fa-caret-down"></i></p>
-          <ul>
-            <a :class="{ active: isActive('/about/') }" href="#">
-              <li>About</li>
-            </a>
-            <a :class="{ active: isActive('/history/') }" href="#">
-              <li>History</li>
-            </a>
-            <a :class="{ active: isActive('/join/') }" href="#">
-              <li>Join</li>
-            </a>
-          </ul>
-        </li>
-        <li><a :class="{ active: isActive('/robots/') }" href="/website/robots/">Robots</a></li>
-        <li><a :class="{ active: isActive('/outreach/') }" href="/website/outreach/">Outreach</a></li>
-        <li><a :class="{ active: isActive('/sponsors/') }" href="/website/sponsors/">Sponsors</a></li>
-      </ul>
-    </nav>
+    </footer>
 
-    <!-- TODO-Content : add links -->
-    <div class="contact">
-      <div class="icons">
-        <a href="" id="insta" target=”_blank”><span><i class="fa-brands fa-instagram"></i>
-          </span></a>
-        <a href="" id="linke" target=”_blank”><span><i class="fa-brands fa-linkedin-in"></i>
-          </span></a>
-        <a href="" id="fb" target=”_blank”><span><i class="fa-brands fa-facebook-f"></i>
-          </span></a>
-        <a href="" id="linke" target=”_blank”><span><i class="fa-brands fa-github"></i>
-          </span></a>
-        <a href="" id="mail" target=”_blank”><span><i class="fa-regular fa-envelope"></i>
-          </span></a>
-      </div>
-    </div>
+    <h2>Our Sponsors</h2>
+    <section class="sponsors">
+      <a href="/website/sponsors/">
+        <i class="fa-solid fa-plus"></i>
+        <h3>Add Your <br>Logo Here</h3>
+      </a>
+      <a href="/website/sponsors/">
+        <i class="fa-solid fa-plus"></i>
+        <h3>Add Your <br>Logo Here</h3>
+      </a>
+      <a href="/website/sponsors/">
+        <i class="fa-solid fa-plus"></i>
+        <h3>Add Your <br>Logo Here</h3>
+      </a>
+    </section>
 
-  </footer>
+    <hr>
 
-  <h5>View site source on <a href="https://github.com/Stan-Robotix/website" target=”_blank”>Github <i
-        class="fa-brands fa-github"></i></a></h5>
+    <h5>View site source on <a href="https://github.com/Stan-Robotix/website" target=”_blank”>Github <i
+          class="fa-brands fa-github"></i></a></h5>
+  </main>
 </template>
 
 <style scoped lang="scss">
 @import "../assets/base.scss";
 
+main {
+  position: relative;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 0px 0px;
+}
+
+hr {
+  border-width: 0px;
+  border-top: 1px solid $primary;
+  width: 50vw;
+  margin: 10px auto;
+}
+
+.sponsors {
+  background-color: $background;
+
+  display: flex;
+  height: 75px;
+  width: 80vw;
+  margin: 10px auto;
+  // position: absolute;
+  // top: -110px;
+  padding-bottom: 15px;
+  border-radius: 150px;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 0;
+  // box-shadow: 0px -5px 0px 0 $accent, 0 -10px 0px 0px $text , 0 -15px 0px 0px $primary;
+
+  a,
+  img {
+    height: 100%;
+    color: $accent;
+    transition: all 0.5s ease;
+  }
+
+  a:hover,
+  img:hover {
+    transform: scale(1.1);
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    i {
+      font-size: 24px;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+  }
+
+}
+
 h5 {
   font-weight: 300;
   font-size: 14px;
   text-align: center;
+  margin: 15px;
 
   a {
     font-weight: 500;
@@ -102,9 +189,12 @@ h5 {
 }
 
 footer {
+  position: relative;
+  z-index: 1;
   outline: 1px solid $primary;
+  background-color: $background;
   padding: 25px;
-  margin: 25px 0px;
+  margin: 25px 0px 25px;
   display: grid;
   grid-template-columns: 2fr 3fr;
   grid-template-rows: max-content max-content;
@@ -307,6 +397,7 @@ footer {
       div {
         h1 {
           font-size: 28px;
+
           span {
             padding: 5px 0.3em;
           }
@@ -323,7 +414,7 @@ footer {
       width: auto;
 
       a {
-        width:60px;
+        width: 60px;
       }
     }
   }
