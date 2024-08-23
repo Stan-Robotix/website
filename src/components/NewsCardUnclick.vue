@@ -61,51 +61,6 @@ h3 {
   padding: 20px;
 }
 
-.img>i+* {
-  border-radius: 10px 10px 0px 0px;
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
-}
-
-a.img {
-  background-color: black;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  display: inline-grid;
-  grid-template: "mid" 1fr/
-    1fr;
-
-  margin: 0;
-  border-radius: 10px 10px 0px 0px;
-
-  i+* {
-    transition: all 0.5s ease;
-    vertical-align: middle;
-    grid-area: mid;
-  }
-
-  >i {
-    grid-area: mid;
-    margin: auto;
-    z-index: 2;
-    color: white;
-    font-size: 0px;
-  }
-}
-
-
-a.img:hover i+* {
-  opacity: 0.7;
-  transform: scale(1.1);
-}
-
-a.img:hover i {
-  font-size: 32px;
-}
-
-
 h4,
 h5 {
   display: inline;
@@ -121,6 +76,7 @@ h4 {
   padding: 2px 10px;
   background: linear-gradient($accent, $orange);
   width: max-content;
+  height: min-content;
 }
 
 h5 {
@@ -130,24 +86,4 @@ h5 {
   color: $secondary;
 }
 
-a {
-  font-weight: 400;
-  grid-area: bot;
-  margin-top: 10px;
-  transition: all 0.5s ease;
-
-  i {
-    color: $accent;
-    transition: all 0.5s ease-out;
-  }
-}
-
-h3+a:hover {
-  color: $accent;
-  font-weight: 500;
-
-  i {
-    margin-left: calc(100% - 105px);
-  }
-}
 </style>

@@ -63,7 +63,6 @@ main {
   }
 }
 
-
 .grid {
   width: max(880px, 70vw);
   display: grid;
@@ -87,15 +86,6 @@ main {
     height: 300px;
     width: 100%;
     object-fit: cover;
-  }
-
-  a.img:hover img {
-    opacity: 0.7;
-    transform: scale(1.1);
-  }
-
-  a.img:hover i {
-    font-size: 32px;
   }
 }
 

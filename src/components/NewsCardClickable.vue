@@ -129,6 +129,7 @@ h4 {
   padding: 2px 10px;
   background: linear-gradient($accent, $orange);
   width: max-content;
+  height: min-content;
 }
 
 h5 {
