@@ -13,17 +13,17 @@
         <div>
           <h4>Event</h4>
           <h5>September 3, 2024</h5>
-          <h2>Really cool event we did</h2>
+          <h3>Really cool event we did</h3>
           <a href="">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
         </div>
       </div>
 
       <div>
-        <img class="img" src="../components/images/websiteSS.png">
+        <img class="img" src="../components/images/DSF4460.jpg">
         <div>
           <h4>Project Update</h4>
           <h5>August 21, 2024</h5>
-          <h2>Completing the website</h2>
+          <h3>Completing the website</h3>
           <p>Our students recreated a website, turning it into a modern, user-friendly platform. This project provided a
             practical learning experience in web development and design while creating a valuable marketing tool for
             Stan Robotix.</p>
@@ -36,7 +36,7 @@
         <div>
           <h4>Placeholder tag</h4>
           <h5>date</h5>
-          <h2>Placeholder event title</h2>
+          <h3>Placeholder event title</h3>
           <a href="">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
         </div>
       </div>
@@ -75,7 +75,7 @@ main {
   align-items: center;
   gap: 20px;
 
-  h2 {
+  h3 {
     color: $blue;
     margin: 15px 0px 0px;
     grid-area: mid;

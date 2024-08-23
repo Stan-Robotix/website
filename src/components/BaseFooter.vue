@@ -112,7 +112,7 @@ main {
 h2 {
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 32px;
   text-align: center;
   margin: 10px 0px 0px;
 }
