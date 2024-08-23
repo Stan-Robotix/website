@@ -72,6 +72,7 @@ main {
   margin: 40px auto;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+  align-items: center;
   gap: 20px;
 
   h2 {
@@ -88,7 +89,7 @@ main {
 
   >div {
     width: auto;
-    max-width: 500px;
+    max-width: 600px;
     min-width: 200px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
