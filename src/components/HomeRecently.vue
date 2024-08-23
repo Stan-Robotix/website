@@ -50,8 +50,8 @@
 
 main {
   background-color: $primary;
-  margin: auto;
-  padding: 1px;
+  margin:  auto;
+  padding: 15px;
 
   >h2 {
     font-weight: 600;
@@ -59,7 +59,7 @@ main {
     line-height: 125%;
     text-align: center;
     width: max-content;
-    margin: 40px auto;
+    margin: 15px auto;
 
     border-bottom: 4px solid $blue;
   }
@@ -67,9 +67,9 @@ main {
 
 
 .grid {
-  width: max(880px, 60vw);
+  width: max(880px, 70vw);
   display: grid;
-  margin: 20px auto;
+  margin: 40px auto;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 20px;
