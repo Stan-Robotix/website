@@ -30,8 +30,29 @@ import BaseHeader from '../../src/components/BaseHeader.vue'
       </a>
     </nav>
 
+    
+
     <div class="timeline">
       <i class="fa-solid fa-chevron-up arrow"></i>
+
+      <div class="card left" id="reefscape">
+        <img
+          src="https://www.chiefdelphi.com/uploads/default/original/3X/e/3/e368a7acb70c869b89fee0382bfe312c595bb781.svg"
+          class="logo" width="100%">
+        <img src="../components/images/robot.jpg" class="img" width="100%">
+        <p>Lorem Ipsum
+          <span class="hidden">Lorem</span>
+        </p>
+        <a>Bouton <i class="fa-solid fa-chevron-down"></i></a>
+      </div>
+      <div class="line">
+        <div class="circle"></div>
+        <div class="link left"></div>
+      </div>
+      <div class="date">
+      <h2> Crescendo - 2024</h2>
+      </div>
+
       <div class="date">
         <h2>Crescendo - 2024</h2>
       </div>
@@ -98,7 +119,8 @@ nav {
   background: $primary;
   width: 500px;
   margin: 0px calc($line-distance + $circle-radius/2 + 6px);
-
+  padding: 20px;
+  border-radius: 15px;
   a {
     font-weight: 400;
     grid-area: button;
@@ -134,6 +156,7 @@ nav {
 
   .img {
     grid-area: img;
+    border-radius: 10px;
   }
 }
 
@@ -145,6 +168,9 @@ nav {
     "img logo"
     "text text"
     "button button";
+  .logo {
+    padding-left: 10px;
+  }
 }
 
 .timeline {
