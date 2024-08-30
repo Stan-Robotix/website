@@ -1,10 +1,11 @@
 <script setup>
 import BaseHeader from '../../src/components/BaseHeader.vue'
+import BaseFooter from '../../src/components/BaseFooter.vue'
 </script>
 
 <template>
 
-  <BaseHeader />
+  <BaseHeader/>
 
   <main>
     <h1>Robots</h1>
@@ -89,6 +90,7 @@ import BaseHeader from '../../src/components/BaseHeader.vue'
       </div>
     </div>
   </main>
+  <BaseFooter/>
 </template>
 
 <style scoped lang="scss">

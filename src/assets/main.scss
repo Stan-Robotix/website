@@ -14,10 +14,14 @@ a,
 
 h1 {
   text-align: center;
-  font-size: max(32px, 10vh);
-  line-height: calc(max(32px, 10vh) + 15px);
+  font-size: min(17vw, 10vh);
+  line-height: calc(min(17vw, 10vh) + 15px);
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
 }
 
+h2 {
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 200;
+}

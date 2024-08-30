@@ -1,5 +1,6 @@
 <script setup>
-
+import NewsCardClickable from './NewsCardClickable.vue'
+import NewsCardUnclick from './NewsCardUnclick.vue'
 </script>
 
 <template>
@@ -7,38 +8,36 @@
     <h2>Recently</h2>
 
     <div class="grid">
-      <!-- TODO-Content: Complete with events and possibly links to learn more if needed ; if not, describe in a "<p>" as in the second div -->
-      <div>
-        <img src="../components/images/robot.jpg">
-        <div>
-          <h4>Event</h4>
-          <h5>September 3, 2024</h5>
-          <h2>Really cool event we did</h2>
-          <a href="">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
-        </div>
-      </div>
+      <!-- TODO-Content: Complete with events and possibly links to learn more if needed ; if not, use NewsCardUnclick -->
+      <NewsCardClickable link="#">
+        <template v-slot:img>
+          <img src="../components/images/robot.jpg">
+        </template>
+        <template v-slot:tag>Event</template>
+        <template v-slot:date>September 3, 2024</template>
+        <template v-slot:title>Really cool event we did</template>
+      </NewsCardClickable>
 
-      <div>
-        <img src="../components/images/websiteSS.png">
-        <div>
-          <h4>Project Update</h4>
-          <h5>August 21, 2024</h5>
-          <h2>Completing the website</h2>
-          <p>Our students recreated a website, turning it into a modern, user-friendly platform. This project provided a
+      <NewsCardUnclick>
+        <template v-slot:img>
+          <img class="img" src="../components/images/DSF4460.jpg">
+        </template>
+        <template v-slot:tag>Project Update</template>
+        <template v-slot:date>August 21, 2024</template>
+        <template v-slot:title>Creating a whole new website</template>
+        <template v-slot:desc>Our students recreated a website, turning it into a modern, user-friendly platform. This project provided a
             practical learning experience in web development and design while creating a valuable marketing tool for
-            Stan Robotix.</p>
-        </div>
-      </div>
+            Stan Robotix.</template>
+      </NewsCardUnclick>
 
-      <div>
-        <img src="../components/images/20220423_BM_0293.jpg">
-        <div>
-          <h4>Placeholder tag</h4>
-          <h5>date</h5>
-          <h2>Placeholder event title</h2>
-          <a href="">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
-        </div>
-      </div>
+      <NewsCardClickable link="#">
+        <template v-slot:img>
+          <img src="../components/images/20220423_BM_0293.jpg">
+        </template>
+        <template v-slot:tag>Placeholder tag</template>
+        <template v-slot:date>Januray 1st, 2024</template>
+        <template v-slot:title>Placeholder event title</template>
+      </NewsCardClickable>
 
     </div>
   </main>
@@ -50,7 +49,7 @@
 main {
   background-color: $primary;
   margin: auto;
-  padding: 1px;
+  padding: 15px;
 
   >h2 {
     font-weight: 600;
@@ -58,54 +57,28 @@ main {
     line-height: 125%;
     text-align: center;
     width: max-content;
-    margin: 40px auto;
+    margin: 15px auto;
 
     border-bottom: 4px solid $blue;
   }
 }
 
-
 .grid {
-  width: max(600px, 60vw);
+  width: max(880px, 70vw);
   display: grid;
-  margin: 20px auto;
+  margin: 40px auto;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+  align-items: center;
   gap: 20px;
-
-  h2 {
-    color: $blue;
-    margin: 15px 0px 0px;
-    grid-area: mid;
-
-    +p {
-      grid-area: bot;
-      text-align: justify;
-      font-size: 14px;
-    }
-  }
 
   >div {
     width: auto;
+    max-width: 600px;
+    min-width: 200px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
     height: min-content;
-  }
-
-  img+div {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: min-content min-content auto;
-    grid-template-areas:
-      "top top"
-      "mid mid"
-      "bot bot"
-    ;
-    margin-top: -5px;
-    border-radius: 0px 0px 10px 10px;
-    background-color: white;
-    height: min-content;
-    padding: 20px;
   }
 
   img {
@@ -116,48 +89,12 @@ main {
   }
 }
 
-h4,
-h5 {
-  display: inline;
-  font-size: 14px;
-  margin: 0;
-  grid-row: 1;
-}
-
-h4 {
-  text-transform: uppercase;
-  color: white;
-  border-radius: 10px;
-  padding: 2px 10px;
-  background: linear-gradient($accent, $orange);
-  width: max-content;
-}
-
-h5 {
-  text-align: justify;
-  font-weight: 300;
-  margin-left: 15px;
-  color: $secondary;
-}
-
-a {
-  font-weight: 400;
-  grid-area: bot;
-  margin-top: 10px;
-  transition: all 0.5s ease;
-
-  i {
-    color: $accent;
-    transition: all 0.5s ease-out;
-  }
-}
-
-a:hover {
-  color: $accent;
-  font-weight: 500;
-
-  i {
-    margin-left: calc(100% - 105px);
+@media screen and (max-width: 900px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90vw;
   }
 }
 </style>

@@ -46,15 +46,20 @@ header a {
   height: 100px;
   display: flex;
   justify-content: center;
+  align-content: space-evenly;
   align-items: center;
   flex-flow:column ;
   flex-wrap: wrap;
   font-size: 25px;
+  gap: 15px;
+  margin-left: 20px;
+  transform: translateY(-2px);
 }
 
 .icons a {
-  height: auto;
-  aspect-ratio: 1/1;
+  height: min-content;
+  width: min-content;
+  line-height: 1;
   color: rgba($text, 0.9);
 }
 
