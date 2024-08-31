@@ -11,16 +11,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const dots = card.querySelector('.dots');
     const button = card.querySelector('a');
 
-    function expandText() {
-      // Supprime la limite de hauteur
-      main.style.maxHeight = 'none';
-      // Cache les trois petits points et le bouton
-      dots.style.display = 'none';
+    if (main.scrollHeight <= 200) {
+      // Si la hauteur est inférieure ou égale à 180px, cacher le bouton et les trois petits points
       button.style.display = 'none';
+      dots.style.display = 'none';
     }
 
-    dots.addEventListener('click', expandText);
-    button.addEventListener('click', expandText);
+    function toggleText() {
+      if (main.style.maxHeight === 'none') {
+        // Rétrécit le texte et affiche les trois petits points
+        main.style.maxHeight = '180px';
+        dots.style.display = 'inline';
+        button.innerHTML = 'Read more <i class="fa-solid fa-chevron-down"></i>';
+      } else {
+        // Étend le texte et cache les trois petits points
+        main.style.maxHeight = 'none';
+        dots.style.display = 'none';
+        button.innerHTML = 'Read less <i class="fa-solid fa-chevron-up"></i>';
+      }
+    }
+
+    dots.addEventListener('click', toggleText);
+    button.addEventListener('click', toggleText);
   });
 });</script>
 <template>
@@ -76,14 +88,14 @@ document.addEventListener("DOMContentLoaded", function () {
           </p>
           <span class="dots">...</span>
         </div>
-        <a>Bouton <i class="fa-solid fa-chevron-down"></i></a>
+        <a>Read more <i class="fa-solid fa-chevron-down"></i></a>
       </div>
       <div class="line">
         <div class="circle"></div>
         <div class="link left"></div>
       </div>
-      <div class="date">
-        <h2> Crescendo - 2024</h2>
+      <div class="date right">
+        <h2> Reefscape - 2024</h2>
       </div>
 
       <div class="date">
@@ -99,11 +111,23 @@ document.addEventListener("DOMContentLoaded", function () {
           class="logo" width="100%">
         <img src="../components/images/robot.jpg" class="img" width="100%">
         <div class="main">
-          <p>Lorem Ipsum
-            <span class="hidden">Lorem</span>
+          <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Sed leo nascetur integer facilisis accumsan aliquet
+            elementum phasellus vitae. Tempus dis mauris integer nostra hac. Metus porta lacus ultricies fermentum
+            mollis
+            curabitur pharetra risus. Nam nullam class imperdiet iaculis felis taciti fringilla porta. Congue taciti leo
+            bibendum feugiat tristique. Nam dictumst id ligula at scelerisque ex euismod. Imperdiet nisl natoque varius
+            mauris quisque. Consequat lacinia nascetur tellus dignissim nibh, dolor neque eleifend.
+            <br>
+            Et dis nostra maximus suscipit cursus viverra quisque. Cursus malesuada elementum euismod consequat
+            condimentum pellentesque vulputate. Curabitur leo praesent amet maecenas, rhoncus facilisi adipiscing. Magna
+            magnis donec egestas dui erat vitae fames dui. Faucibus integer enim faucibus; sem et nisl! Augue felis
+            nostra
+            inceptos; curae ultrices accumsan. Sed finibus faucibus vitae vulputate accumsan ad. Blandit neque ipsum
+            dictumst sociosqu pretium non.
           </p>
+          <span class="dots">...</span>
         </div>
-        <a>Bouton <i class="fa-solid fa-chevron-down"></i></a>
+        <a>Read more <i class="fa-solid fa-chevron-down"></i></a>
       </div>
 
       <div class="card left">
@@ -112,11 +136,23 @@ document.addEventListener("DOMContentLoaded", function () {
           class="logo" width="100%">
         <img src="../components/images/robot.jpg" class="img" width="100%">
         <div class="main">
-          <p>Lorem Ipsum
-            <span class="hidden">Lorem</span>
+          <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Sed leo nascetur integer facilisis accumsan aliquet
+            elementum phasellus vitae. Tempus dis mauris integer nostra hac. Metus porta lacus ultricies fermentum
+            mollis
+            curabitur pharetra risus. Nam nullam class imperdiet iaculis felis taciti fringilla porta. Congue taciti leo
+            bibendum feugiat tristique. Nam dictumst id ligula at scelerisque ex euismod. Imperdiet nisl natoque varius
+            mauris quisque. Consequat lacinia nascetur tellus dignissim nibh, dolor neque eleifend.
+            <br>
+            Et dis nostra maximus suscipit cursus viverra quisque. Cursus malesuada elementum euismod consequat
+            condimentum pellentesque vulputate. Curabitur leo praesent amet maecenas, rhoncus facilisi adipiscing. Magna
+            magnis donec egestas dui erat vitae fames dui. Faucibus integer enim faucibus; sem et nisl! Augue felis
+            nostra
+            inceptos; curae ultrices accumsan. Sed finibus faucibus vitae vulputate accumsan ad. Blandit neque ipsum
+            dictumst sociosqu pretium non.
           </p>
+          <span class="dots">...</span>
         </div>
-        <a>Bouton <i class="fa-solid fa-chevron-down"></i></a>
+        <a>Read more <i class="fa-solid fa-chevron-down"></i></a>
       </div>
       <div class="line">
         <div class="circle"></div>
@@ -137,17 +173,13 @@ $circle-radius : 15px;
 
 @mixin content($card-background) {
   background: $card-background;
+
+  .dots {
+    background-color: $card-background;
+    box-shadow: 0px 10px 5px 5px $card-background;
+  }
 }
 
-// Styles specific to year
-
-#reefscape {
-  @include content(#b2e6f4);
-}
-
-#crescendo {
-  @include content(#aedaca);
-}
 
 nav {
   display: flex;
@@ -169,14 +201,6 @@ nav {
     "text text"
     "button button";
 
-  @mixin content($card-background) {
-    background: $card-background;
-
-    .dots {
-      background-color: $card-background;
-      box-shadow: 0px 10px 5px 5px $card-background;
-    }
-  }
 
   width: 500px;
   margin: 0px calc($line-distance + $circle-radius/2 + 6px);
@@ -199,15 +223,11 @@ nav {
   a:hover {
     color: $accent;
     font-weight: 500;
-
-    i {
-      margin-left: calc(100% - 105px);
-    }
   }
 
   .main {
     grid-area: text;
-    max-height: 250px;
+    max-height: 180px;
     overflow: hidden;
     position: relative;
 
@@ -225,10 +245,10 @@ nav {
       height: 20px;
       z-index: 1;
       cursor: pointer;
+      transition: all 1.5s ease;
 
-      @mixin content($card-background) {
-        background-color: $card-background;
-        box-shadow: 0px 10px 5px 5px $card-background;
+      &:hover {
+        opacity: 0.5;
       }
     }
   }
@@ -285,6 +305,12 @@ nav {
 
       transform: translateY(-38%);
     }
+
+    &.right {
+      h2 {
+        left:30px;
+      }
+    }
   }
 
   .line {
@@ -317,5 +343,19 @@ nav {
       left: calc(50% - $line-distance - $circle-radius/2 - 3px);
     }
   }
+}
+
+// Styles specific to year
+
+.card { // DEFAULT
+  @include content($primary);
+}
+
+#reefscape {
+  @include content(#b2e6f4);
+}
+
+#crescendo {
+  @include content(#aedaca);
 }
 </style>
