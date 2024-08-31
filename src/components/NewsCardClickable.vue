@@ -44,7 +44,7 @@ h3 {
   }
 }
 
->div {
+div>div {
   width: auto;
   max-width: 600px;
   min-width: 200px;
