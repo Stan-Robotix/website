@@ -1,6 +1,9 @@
 <script setup>
 import BaseHeader from '../../src/components/BaseHeader.vue'
 import BaseFooter from '../../src/components/BaseFooter.vue'
+// import AboutExplanatoryText from '../../src/components/AboutExplanatoryText.vue'
+import AboutSubteams from '../../src/components/AboutSubteams.vue';
+// import AboutOrganizationalChart from '../../src/components/AboutOrganizationalChart.vue';
 </script>
 
 <template>
@@ -10,6 +13,7 @@ import BaseFooter from '../../src/components/BaseFooter.vue'
         <main>
             <h1>About</h1>
         </main>
+    <AboutSubteams></AboutSubteams>
     <BaseFooter></BaseFooter>
 </template>
 
@@ -17,7 +21,7 @@ import BaseFooter from '../../src/components/BaseFooter.vue'
 @import "../assets/base.scss";
 
 template {
-    color: #212B42;
+    color: $text;
 }
 
 </style>
