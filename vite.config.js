@@ -11,6 +11,7 @@ export default defineConfig({
         home: resolve(__dirname, "index.html"),
         outreach: resolve(__dirname, "outreach/index.html"),
         robots: resolve(__dirname, "robots/index.html"),
+        about: resolve(__dirname, "about/index.html"),
       },
     },
   },

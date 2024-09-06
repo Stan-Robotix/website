@@ -39,7 +39,7 @@ export default {
       <li>
         <p>Team <i class="fa-solid fa-caret-down"></i></p>
         <ul>
-          <a :class="{ active: isActive('/about/') }" href="#">
+          <a :class="{ active: isActive('/about/') }" href="/website/about/">
             <li>About</li>
           </a>
           <a :class="{ active: isActive('/history/') }" href="#">
