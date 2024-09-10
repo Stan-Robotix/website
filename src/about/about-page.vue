@@ -7,14 +7,14 @@ import AboutSubteams from '../../src/components/AboutSubteams.vue';
 </script>
 
 <template>
-    
-    <BaseHeader></BaseHeader>
-
-        <main>
-            <h1>About</h1>
-        </main>
-    <AboutSubteams></AboutSubteams>
-    <BaseFooter></BaseFooter>
+    <body>
+        <BaseHeader></BaseHeader>
+           <main>
+                <h1>About</h1>
+            </main>
+        <AboutSubteams></AboutSubteams>
+        <BaseFooter></BaseFooter>
+    </body>
 </template>
 
 <style scoped lang="scss">
