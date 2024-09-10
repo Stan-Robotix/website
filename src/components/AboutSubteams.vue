@@ -10,22 +10,28 @@
         </p>
         <ul>
             <li class="programming">
+                <div></div>
                 <p>Programming</p>
             </li>
-            <li class="S&D">
-                <p>S&D</p>
+            <li class="SND">
+                <div></div>
+                <p>SND</p>
             </li>
             <li class="construction">
+                <div></div>
                 <p>Construction</p>
             </li>
-            <li class="Equipe1">
-                <p>Equipe1</p>
+            <li class="marketing">
+                <div></div>
+                <p>Marketing</p>
             </li>
-            <li class="Equipe2">
-                <p>Equipe2</p>
+            <li class="medias">
+                <div></div>
+                <p>Medias</p>
             </li>
-            <li class="Equipe3">
-                <p>Equipe3</p>
+            <li class="design">
+                <div></div>
+                <p>Design</p>
             </li>
         </ul>
     </main>
@@ -60,5 +66,11 @@ li {
     height: 40vh;
     text-align: center;
     margin: auto;
+}
+
+li div {
+    background-color: #ffffff;
+    height: 80%;
+    // mettre des images des equipes?
 }
 </style>

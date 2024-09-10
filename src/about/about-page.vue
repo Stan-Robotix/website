@@ -3,18 +3,17 @@ import BaseHeader from '../../src/components/BaseHeader.vue'
 import BaseFooter from '../../src/components/BaseFooter.vue'
 // import AboutExplanatoryText from '../../src/components/AboutExplanatoryText.vue'
 import AboutSubteams from '../../src/components/AboutSubteams.vue';
-// import AboutOrganizationalChart from '../../src/components/AboutOrganizationalChart.vue';
+import AboutOrganizationalChart from '../../src/components/AboutOrganizationalChart.vue';
 </script>
 
 <template>
-    <body>
-        <BaseHeader></BaseHeader>
-           <main>
-                <h1>About</h1>
-            </main>
-        <AboutSubteams></AboutSubteams>
-        <BaseFooter></BaseFooter>
-    </body>
+    <BaseHeader></BaseHeader>
+        <main>
+            <h1>About</h1>
+        </main>
+    <AboutOrganizationalChart></AboutOrganizationalChart>
+    <AboutSubteams></AboutSubteams>
+    <BaseFooter></BaseFooter>
 </template>
 
 <style scoped lang="scss">
