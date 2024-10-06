@@ -12,6 +12,7 @@ export default defineConfig({
         outreach: resolve(__dirname, "outreach/index.html"),
         robots: resolve(__dirname, "robots/index.html"),
         about: resolve(__dirname, "about/index.html"),
+        wip: resolve(__dirname, "wip/index.html"),
       },
     },
   },
