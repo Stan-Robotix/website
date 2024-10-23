@@ -34,12 +34,12 @@ export default {
     <a @click="closeNav()" class="closeButton"><i class="fa-solid fa-xmark"></i></a>
     <ul>
       <li>
-        <a :class="{ active: isActive('/home.html') }" href="/website/">Home</a>
+        <a :class="{ active: isActive('/home.html') }" href="/">Home</a>
       </li>
       <li>
         <p>Team <i class="fa-solid fa-caret-down"></i></p>
         <ul>
-          <a :class="{ active: isActive('/about/') }" href="/website/about/">
+          <a :class="{ active: isActive('/about/') }" href="/about/">
             <li>About</li>
           </a>
           <a :class="{ active: isActive('/history/') }" href="#">
@@ -50,9 +50,9 @@ export default {
           </a>
         </ul>
       </li>
-      <li><a :class="{ active: isActive('/robots/') }" href="/website/robots/">Robots</a></li>
-      <li><a :class="{ active: isActive('/outreach/') }" href="/website/outreach/">Outreach</a></li>
-      <li><a :class="{ active: isActive('/sponsors/') }" href="/website/sponsors/">Sponsors</a></li>
+      <li><a :class="{ active: isActive('/robots/') }" href="/robots/">Robots</a></li>
+      <li><a :class="{ active: isActive('/outreach/') }" href="/outreach/">Outreach</a></li>
+      <li><a :class="{ active: isActive('/sponsors/') }" href="/sponsors/">Sponsors</a></li>
     </ul>
   </nav>
 </template>

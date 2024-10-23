@@ -27,7 +27,7 @@ export default {
 
 
     <footer>
-      <a href="/website/">
+      <a href="/">
         <img alt="logo" class="logo" src="../components/icons/Logotix-Bluetext.svg" height="150px" />
         <div>
           <h1>Stan <span>Robotix</span></h1>
@@ -39,12 +39,12 @@ export default {
       <nav role="navigation">
         <ul>
           <li>
-            <a :class="{ active: isActive('/home.html') }" href="/website/">Home</a>
+            <a :class="{ active: isActive('/home.html') }" href="/">Home</a>
           </li>
           <li>
             <p>Team <i class="fa-solid fa-caret-down"></i></p>
             <ul>
-              <a :class="{ active: isActive('/about/') }" href="/website/about/">
+              <a :class="{ active: isActive('/about/') }" href="/about/">
                 <li>About</li>
               </a>
               <a :class="{ active: isActive('/history/') }" href="#">
@@ -55,9 +55,9 @@ export default {
               </a>
             </ul>
           </li>
-          <li><a :class="{ active: isActive('/robots/') }" href="/website/robots/">Robots</a></li>
-          <li><a :class="{ active: isActive('/outreach/') }" href="/website/outreach/">Outreach</a></li>
-          <li><a :class="{ active: isActive('/sponsors/') }" href="/website/sponsors/">Sponsors</a></li>
+          <li><a :class="{ active: isActive('/robots/') }" href="/robots/">Robots</a></li>
+          <li><a :class="{ active: isActive('/outreach/') }" href="/outreach/">Outreach</a></li>
+          <li><a :class="{ active: isActive('/sponsors/') }" href="/sponsors/">Sponsors</a></li>
         </ul>
       </nav>
 
@@ -81,15 +81,15 @@ export default {
 
     <h2>Our Sponsors</h2>
     <section class="sponsors">
-      <a href="/website/sponsors/">
+      <a href="/sponsors/">
         <i class="fa-solid fa-plus"></i>
         <h3>Add Your <br>Logo Here</h3>
       </a>
-      <a href="/website/sponsors/">
+      <a href="/sponsors/">
         <i class="fa-solid fa-plus"></i>
         <h3>Add Your <br>Logo Here</h3>
       </a>
-      <a href="/website/sponsors/">
+      <a href="/sponsors/">
         <i class="fa-solid fa-plus"></i>
         <h3>Add Your <br>Logo Here</h3>
       </a>

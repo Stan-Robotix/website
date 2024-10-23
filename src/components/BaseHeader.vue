@@ -4,7 +4,7 @@ import BaseNav from './BaseNav.vue'
 
 <template>
   <header>
-    <a href="/website/"><img alt="logo" class="logo" src="../components/icons/Nombrotix.svg" height="100px"/></a>
+    <a href="/"><img alt="logo" class="logo" src="../components/icons/Nombrotix.svg" height="100px"/></a>
     
     <div class="icons">
       <a href=""><i class="fa-brands fa-instagram"></i></a>
