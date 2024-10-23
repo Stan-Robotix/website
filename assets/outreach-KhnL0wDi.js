@@ -1,0 +1,1 @@
+import"./main-B1lMhwW_.js";import{_ as s,o as t,c,e as a,F as p,B as r,g as _,p as n,d,a as o,i as u}from"./BaseFooter-D5OR6hz7.js";const l=e=>(n("data-v-39b1261b"),e=e(),d(),e),m=l(()=>o("main",null,[o("h1",null,"Outreach")],-1)),h={__name:"outreach-page",setup(e){return(B,b)=>(t(),c(p,null,[a(r),m,a(_)],64))}},i=s(h,[["__scopeId","data-v-39b1261b"]]);u(i).mount("#app");
