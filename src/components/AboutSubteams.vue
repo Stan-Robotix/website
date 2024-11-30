@@ -18,7 +18,7 @@
             <li class="SND">
                 <div class = "image"></div>
                 <div class = "texte">
-                    S&D&nbsp;<i class="fa-solid fa-chevron-up"></i>
+                    SnD&nbsp;<i class="fa-solid fa-chevron-up"></i>
                 </div>
             </li>
             <li class="construction">
@@ -88,27 +88,27 @@ li div {
 }
 
 .design .image {
-    background-image: url("images/DesignTeam_Picture.jpg");
+    background-image: url("images/Subteams_images/DesignTeam_Picture.jpg");
 }
 
 .programming .image {
-    background-image: url("images/ProgTeam_Picture.jpg");
+    background-image: url("images/Subteams_images/ProgTeam_Picture.jpg");
 }
 
 .medias .image {
-    background-image: url("images/MediasTeam_Picture.jpg");
+    background-image: url("images/Subteams_images/MediasTeam_Picture.jpg");
 }
 
 .construction .image {
-    background-image: url("images/ConstructionTeam_Picture.jpg");
+    background-image: url("images/Subteams_images/ConstructionTeam_Picture.jpg");
 }
 
 .SND .image {
-    background-image: url("images/S&DTeam_Picture.jpg");
+    background-image: url("images/Subteams_images/SnDTeam_Picture.jpg");
 }
 
 .marketing .image {
-    background-image: url("images/MarketingTeam_Picture.jpg");
+    background-image: url("images/Subteams_images/MarketingTeam_Picture.jpg");
 }
 
 .design p {
