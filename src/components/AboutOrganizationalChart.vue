@@ -4,19 +4,19 @@
     <!-- image de l'organisation de StanRobotix?-->
      <h3>Team members</h3>
      <ul>
-        <li class="captain programming">
+        <li class="captain devteam">
             <div></div>
             <p>Micha</p>
-            <h5 class="description">Captain Programming</h5>
+            <h5 class="description">Captain Dev Team</h5>
         </li>
-        <li class="mentor programming">
+        <li class="mentor devteam">
             <div></div>
-            <p>Raphael</p>
-            <h5 class="description">Mentor Programming</h5>
+            <p>Raphaël</p>
+            <h5 class="description">Mentor Dev Team</h5>
         </li>
         <li class="mentor constuction">
             <div></div>
-            <p>Theo</p>
+            <p>Téo</p>
             <h5 class="description">Mentor Construction</h5>
         </li>
         <li class="captain construction">
@@ -26,7 +26,7 @@
         </li>
         <li class="team_captain">
             <div></div>
-            <p>Stephanie</p>
+            <p>Stéphanie</p>
             <h5 class="description">Team Captain</h5>
         </li>
      </ul>
@@ -39,14 +39,17 @@ ul {
     display: flex;
     gap: 10px;
     height: 40vh;
+    padding: 0 40px;
+    justify-content: space-around;
 }
 
 li {
     list-style: none;
-    background-color: $secondary;
+    background-color: $primary;
     height: 100%;
-    width: 15%;
+    width: 18%;
     text-align: center;
+    border-radius: 10px;
 }
 
 h3 {

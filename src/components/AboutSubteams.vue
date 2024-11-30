@@ -6,32 +6,45 @@
     <main>
         <h2>Subteams</h2>
         <p>
-            Stan-Robotix is divided into multiple subteams.
+            <!-- explication des subteams-->
         </p>
         <ul>
             <li class="programming">
-                <div></div>
-                <p>Programming</p>
+                <div class = "image"></div>
+                <div class = "texte">
+                    Programming&nbsp;<i class="fa-solid fa-chevron-up"></i>
+                </div>
             </li>
             <li class="SND">
-                <div></div>
-                <p>SND</p>
+                <div class = "image"></div>
+                <div class = "texte">
+                    S&D&nbsp;<i class="fa-solid fa-chevron-up"></i>
+                </div>
             </li>
             <li class="construction">
-                <div></div>
-                <p>Construction</p>
+                <div class = "image"></div>
+                <div class = "texte">
+                    Construction&nbsp;<i class="fa-solid fa-chevron-up"></i>
+                </div>
             </li>
             <li class="marketing">
-                <div></div>
-                <p>Marketing</p>
+                <div class = "image"></div>
+                <div class = "texte">
+                    Marketing&nbsp;<i class="fa-solid fa-chevron-up"></i>
+                </div>
             </li>
             <li class="medias">
-                <div></div>
-                <p>Medias</p>
+                <div class = "image"></div>
+                <div class = "texte">
+                    Medias&nbsp;<i class="fa-solid fa-chevron-up"></i>
+                </div>
             </li>
             <li class="design">
-                <div></div>
-                <p>Design</p>
+                <div class = "image"></div>
+                <div class = "texte">
+                    Design&nbsp;<i class="fa-solid fa-chevron-up"></i>
+                </div>
+                
             </li>
         </ul>
     </main>
@@ -66,11 +79,50 @@ li {
     height: 40vh;
     text-align: center;
     margin: auto;
+    border-radius: 10px;
 }
 
 li div {
-    background-color: #ffffff;
     height: 80%;
-    // mettre des images des equipes?
+    border-radius: 10px;
+}
+
+.design .image {
+    background-image: url("images/DesignTeam_Picture.jpg");
+}
+
+.programming .image {
+    background-image: url("images/ProgTeam_Picture.jpg");
+}
+
+.medias .image {
+    background-image: url("images/MediasTeam_Picture.jpg");
+}
+
+.construction .image {
+    background-image: url("images/ConstructionTeam_Picture.jpg");
+}
+
+.SND .image {
+    background-image: url("images/S&DTeam_Picture.jpg");
+}
+
+.marketing .image {
+    background-image: url("images/MarketingTeam_Picture.jpg");
+}
+
+.design p {
+    margin: 0;
+    height: 20%;
+}
+
+.texte {
+    display: flex;
+    height: 20%;
+    background-color: $secondary;
+    color: $text;
+    align-items: center;
+    justify-content: center;
+    //bouton qui ouvre une explication
 }
 </style>
