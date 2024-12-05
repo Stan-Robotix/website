@@ -111,6 +111,12 @@ li div {
     background-image: url("images/Subteams_images/MarketingTeam_Picture.jpg");
 }
 
+.image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .design p {
     margin: 0;
     height: 20%;
@@ -123,6 +129,10 @@ li div {
     color: $text;
     align-items: center;
     justify-content: center;
-    //bouton qui ouvre une explication
+    //bouton qui ouvre une explication de la subteam
+}
+
+.texte :hover {
+    cursor: pointer;
 }
 </style>
