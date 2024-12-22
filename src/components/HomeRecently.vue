@@ -9,13 +9,13 @@ import NewsCardUnclick from './NewsCardUnclick.vue'
 
     <div class="grid">
       <!-- TODO-Content: Complete with events and possibly links to learn more if needed ; if not, use NewsCardUnclick -->
-      <NewsCardClickable link="#">
+      <NewsCardClickable link="/robots/">
         <template v-slot:img>
           <img src="../components/images/robot.jpg">
         </template>
         <template v-slot:tag>Event</template>
-        <template v-slot:date>September 3, 2024</template>
-        <template v-slot:title>Really cool event we did</template>
+        <template v-slot:date>March 3, 2024</template>
+        <template v-slot:title>Festival de Robotique 2024 - FIRST Crescendo</template>
       </NewsCardClickable>
 
       <NewsCardUnclick>
@@ -30,13 +30,13 @@ import NewsCardUnclick from './NewsCardUnclick.vue'
             Stan Robotix.</template>
       </NewsCardUnclick>
 
-      <NewsCardClickable link="#">
+      <NewsCardClickable link="https://lesserpuariens.com/">
         <template v-slot:img>
-          <img src="../components/images/20220423_BM_0293.jpg">
+          <img src="https://cdn.discordapp.com/attachments/1104424782335840297/1317099038872703017/IMG_20241212_181451231.jpg?ex=67695111&is=6767ff91&hm=414657f8a5f72d07c9e5491940d78987d38d929e78f7a3ab87d19180907c1daa&">
         </template>
-        <template v-slot:tag>Placeholder tag</template>
-        <template v-slot:date>Januray 1st, 2024</template>
-        <template v-slot:title>Placeholder event title</template>
+        <template v-slot:tag>Outreach</template>
+        <template v-slot:date>Fall 2024</template>
+        <template v-slot:title>Serpuarien Initiative in College Stanislas</template>
       </NewsCardClickable>
 
     </div>
