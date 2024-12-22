@@ -1,6 +1,6 @@
 import '../../src/assets/main.scss'
-// add comment
-import { createApp } from 'vue'
-import App from './outreach-page.vue'
 
-createApp(App).mount('#app')
+import { createApp } from 'vue'
+import Outreach from './outreach-page.vue'
+
+createApp(Outreach).mount('#app')
