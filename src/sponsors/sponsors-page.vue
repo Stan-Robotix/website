@@ -1,17 +1,146 @@
 <script setup>
-import BaseHeader from '../../src/components/BaseHeader.vue'
-import BaseFooter from '../../src/components/BaseFooter.vue'
+import BaseHeader from "../../src/components/BaseHeader.vue";
+import BaseFooter from "../../src/components/BaseFooter.vue";
+import SponsorsLogos from "../../src/components/SponsorsLogos.vue";
 </script>
 
 <template>
-  <BaseHeader/>
+  <BaseHeader />
   <main>
     <h1>Sponsors</h1>
+    <h2>Our Sponsors</h2>
+    <SponsorsLogos />
+    <h2>Interested in donating ?</h2>
+    <p>
+      A donation could help us with our future projects and competitions,
+      especially with the <b>cost of materials</b>, tools and travel expenses.
+    </p>
+    <a
+      class="wishlist"
+      href="../../src/components/other_assets/Wishlist_globale.pdf"
+      download
+      ><img src="../../src/components/icons/PDF_file_icon.svg" />See our
+      Wishlist PDF
+    </a>
+
+    <div class="donate-section">
+      <a
+        class="donate"
+        href="https://fondation.stanislas.qc.ca/fcs-1/don-en-ligne/stan-robotix-40"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Donate <i class="fa-solid fa-chevron-right"></i></a
+      >
+    </div>
+
+    <h2>Want to sponsors us ?</h2>
+    <p>
+      Contact us at
+      <a href="mailto:stanrobotix@gmail.com">stanrobotix@gmail.com</a>
+    </p>
+
+    <h3>Documents</h3>
+    <section class="docs">
+      <a
+      class="wishlist"
+      href="../../src/components/other_assets/Wishlist_globale.pdf"
+      download
+      ><img src="../../src/components/icons/PDF_file_icon.svg" />Sponsorship File
+    </a>
+    <a
+      class="wishlist"
+      href="../../src/components/other_assets/Wishlist_globale.pdf"
+      download
+      ><img src="../../src/components/icons/PDF_file_icon.svg" />Funding Request Letter
+    </a>
+    </section>
+
   </main>
-  <BaseFooter/>
+  <BaseFooter />
 </template>
 
 <style scoped lang="scss">
 @import "../assets/base.scss";
+
+section.docs {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin: 0;
+
+  a {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: $accent;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin:0;
+
+    img {
+      height: 2em;
+      margin-right: 0.5em;
+      transform: translateY(-0.4em);
+    }
+  }
+}
+
+main {
+  text-align: center;
+
+  > h2 {
+    font-weight: 200;
+    font-size: 300%;
+    text-align: center;
+    width: max-content;
+    margin: 0.75em auto 15px;
+    color: darken($secondary, 10%);
+  }
+}
+
+a {
+  color: $accent;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+a.wishlist {
+  font-weight: 500;
+  margin-top: 2em;
+  width: max-content;
+
+  img {
+    height: 3em;
+    display: block;
+    margin: 1em auto 0.25em;
+  }
+}
+
+p {
+  margin: auto;
+  max-width: 600px;
+}
+
+a.donate {
+  background-color: $accent;
+  color: white;
+  font-size: 1.5em;
+  padding: 0.5em 1.4em;
+  border-radius: 2em;
+  margin: 1.5em;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: rgba(white, 0.5);
+    color: $accent;
+    outline: 3px solid $accent;
+  }
+}
 
 </style>
