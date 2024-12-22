@@ -45,14 +45,14 @@ import SponsorsLogos from "../../src/components/SponsorsLogos.vue";
     <section class="docs">
       <a
         class="wishlist"
-        href="../../src/components/other_assets/Wishlist_globale.pdf"
+        href="../../src/components/other_assets/STAN_ROBOTIX_-_Dossier_de_commandite.pdf"
         download
         ><img src="../../src/components/icons/PDF_file_icon.svg" />Sponsorship
-        File
+        File (FR)
       </a>
       <a
         class="wishlist"
-        href="../../src/components/other_assets/Wishlist_globale.pdf"
+        href="../../src/components/other_assets/Stan Robotix - Funding Request letter.pdf"
         download
         ><img src="../../src/components/icons/PDF_file_icon.svg" />Funding
         Request Letter
