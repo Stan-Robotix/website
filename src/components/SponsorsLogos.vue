@@ -2,15 +2,15 @@
 
 <template>
   <section class="sponsors">
-    <a href="/sponsors/">
+    <a href="/sponsors/#donating">
       <i class="fa-solid fa-plus"></i>
       <h3>Add Your <br />Logo Here</h3>
     </a>
-    <a href="/sponsors/">
+    <a href="/sponsors/#donating">
       <i class="fa-solid fa-plus"></i>
       <h3>Add Your <br />Logo Here</h3>
     </a>
-    <a href="/sponsors/">
+    <a href="/sponsors/#donating">
       <i class="fa-solid fa-plus"></i>
       <h3>Add Your <br />Logo Here</h3>
     </a>
