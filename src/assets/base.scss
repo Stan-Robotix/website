@@ -26,6 +26,10 @@ $grey: #cfd7e6;
   scrollbar-color: $secondary white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin:0;
   padding:0;
