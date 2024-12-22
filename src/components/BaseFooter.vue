@@ -1,10 +1,13 @@
+<script setup>
+import SponsorsLogos from "./SponsorsLogos.vue";
+</script>
 <script>
 export default {
   // FONCTIONS JAVASCRIPT QUI PERMETTENT DE DÉTECTER SI ON EST SUR UNE CERTAINE PAGE
   // but : highlight le bouton de la page sur lequel on se trouve
   methods: {
     getBasePath() {
-      const pathArray = window.location.pathname.split('/');
+      const pathArray = window.location.pathname.split("/");
       // Supposons que le chemin de base soit le nom du dépôt, ici 'website'
       return `/${pathArray[1]}`;
     },
@@ -13,22 +16,25 @@ export default {
       const currentPath = window.location.pathname;
 
       // Vérifiez si le chemin est la racine et que le path spécifié est '/home.html'
-      if (currentPath === `${basePath}/` && path === '/home.html') {
+      if (currentPath === `${basePath}/` && path === "/home.html") {
         return true;
       }
       return currentPath === `${basePath}${path}`;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <template>
   <main>
-
-
     <footer>
       <a href="/">
-        <img alt="logo" class="logo" src="../components/icons/Logotix-Bluetext.svg" height="150px" />
+        <img
+          alt="logo"
+          class="logo"
+          src="../components/icons/Logotix-Bluetext.svg"
+          height="150px"
+        />
         <div>
           <h1>Stan <span>Robotix</span></h1>
           <h3>Team 6622</h3>
@@ -55,50 +61,57 @@ export default {
               </a>
             </ul>
           </li>
-          <li><a :class="{ active: isActive('/robots/') }" href="/robots/">Robots</a></li>
-          <li><a :class="{ active: isActive('/outreach/') }" href="/outreach/">Outreach</a></li>
-          <li><a :class="{ active: isActive('/sponsors/') }" href="/sponsors/">Sponsors</a></li>
+          <li>
+            <a :class="{ active: isActive('/robots/') }" href="/robots/"
+              >Robots</a
+            >
+          </li>
+          <li>
+            <a :class="{ active: isActive('/outreach/') }" href="/outreach/"
+              >Outreach</a
+            >
+          </li>
+          <li>
+            <a :class="{ active: isActive('/sponsors/') }" href="/sponsors/"
+              >Sponsors</a
+            >
+          </li>
         </ul>
       </nav>
 
       <!-- TODO-Content : add links -->
       <div class="contact">
         <div class="icons">
-          <a href="" id="insta" target=”_blank”><span><i class="fa-brands fa-instagram"></i>
-            </span></a>
-          <a href="" id="linke" target=”_blank”><span><i class="fa-brands fa-linkedin-in"></i>
-            </span></a>
-          <a href="" id="fb" target=”_blank”><span><i class="fa-brands fa-facebook-f"></i>
-            </span></a>
-          <a href="" id="linke" target=”_blank”><span><i class="fa-brands fa-github"></i>
-            </span></a>
-          <a href="" id="mail" target=”_blank”><span><i class="fa-regular fa-envelope"></i>
-            </span></a>
+          <a href="" id="insta" target="”_blank”"
+            ><span><i class="fa-brands fa-instagram"></i> </span
+          ></a>
+          <a href="" id="linke" target="”_blank”"
+            ><span><i class="fa-brands fa-linkedin-in"></i> </span
+          ></a>
+          <a href="" id="fb" target="”_blank”"
+            ><span><i class="fa-brands fa-facebook-f"></i> </span
+          ></a>
+          <a href="" id="linke" target="”_blank”"
+            ><span><i class="fa-brands fa-github"></i> </span
+          ></a>
+          <a href="" id="mail" target="”_blank”"
+            ><span><i class="fa-regular fa-envelope"></i> </span
+          ></a>
         </div>
       </div>
-
     </footer>
 
     <h2>Our Sponsors</h2>
-    <section class="sponsors">
-      <a href="/sponsors/">
-        <i class="fa-solid fa-plus"></i>
-        <h3>Add Your <br>Logo Here</h3>
-      </a>
-      <a href="/sponsors/">
-        <i class="fa-solid fa-plus"></i>
-        <h3>Add Your <br>Logo Here</h3>
-      </a>
-      <a href="/sponsors/">
-        <i class="fa-solid fa-plus"></i>
-        <h3>Add Your <br>Logo Here</h3>
-      </a>
-    </section>
+    <SponsorsLogos />
 
-    <hr>
+    <hr />
 
-    <h5>View site source on <a href="https://github.com/Stan-Robotix/website" target=”_blank”>Github <i
-          class="fa-brands fa-github"></i></a></h5>
+    <h5>
+      View site source on
+      <a href="https://github.com/Stan-Robotix/website" target="”_blank”"
+        >Github <i class="fa-brands fa-github"></i
+      ></a>
+    </h5>
   </main>
 </template>
 
@@ -122,51 +135,6 @@ hr {
   border-top: 1px solid $primary;
   width: 50vw;
   margin: 10px auto;
-}
-
-.sponsors {
-  background-color: $background;
-
-  display: flex;
-  height: 75px;
-  width: 80vw;
-  margin: 10px auto;
-  // position: absolute;
-  // top: -110px;
-  padding-bottom: 15px;
-  border-radius: 150px;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: 0;
-  // box-shadow: 0px -5px 0px 0 $accent, 0 -10px 0px 0px $text , 0 -15px 0px 0px $primary;
-
-  a,
-  img {
-    height: 100%;
-    color: $accent;
-    transition: all 0.5s ease;
-  }
-
-  a:hover,
-  img:hover {
-    transform: scale(1.1);
-  }
-
-  a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    i {
-      font-size: 24px;
-    }
-
-    h3 {
-      text-transform: uppercase;
-      font-weight: 300;
-    }
-  }
-
 }
 
 h5 {
@@ -242,7 +210,6 @@ footer {
     transform: scale(1.05);
   }
 
-
   nav {
     display: block;
     width: max-content;
@@ -294,7 +261,6 @@ footer {
           clear: both;
           width: 90%;
         }
-
       }
     }
 
