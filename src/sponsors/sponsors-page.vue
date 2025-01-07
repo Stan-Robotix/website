@@ -14,13 +14,11 @@ import SponsorsLogos from "../../src/components/SponsorsLogos.vue";
       <h2>Interested in donating ?</h2>
       <p>
         A donation could help us with our future projects and competitions,
-        especially with the <b>cost of materials</b>, tools and travel expenses.
+        especially with the cost of materials, tools and travel expenses.
       </p>
-      <a
-        class="wishlist"
-        href="../../pdf/Wishlist.pdf"
-        download
-        ><img src="../../src/components/icons/PDF_file_icon.svg" />See our
+      <a class="wishlist" href="../../pdf/Wishlist.pdf" download>
+        <!-- the link on the deployed version goes to "public/pdf..." -->
+        <img src="../../src/components/icons/PDF_file_icon.svg" />See our
         Wishlist PDF
       </a>
 
@@ -35,26 +33,23 @@ import SponsorsLogos from "../../src/components/SponsorsLogos.vue";
       </div>
     </section>
 
-    <h2 >Want to sponsors us ?</h2>
-    <p> If you want to become a sponsor, please <br>
+    <h2>Want to sponsors us ?</h2>
+    <p>
+      If you want to become a sponsor, please <br />
       Contact us at
       <a href="mailto:stanrobotix@gmail.com">stanrobotix@gmail.com</a>
     </p>
 
     <h3>Documents</h3>
     <section class="docs">
-      <a
-        class="wishlist"
-        href="../../pdf/Sponsorship_file.pdf"
-        download
-        ><img src="../../src/components/icons/PDF_file_icon.svg" />Sponsorship
-        File
+      <a class="wishlist" href="../../pdf/Sponsorship_file.pdf" download>
+        <!-- the link on the deployed version goes to "public/pdf..." -->
+        <img src="../../src/components/icons/PDF_file_icon.svg" />
+        Sponsorship File
       </a>
-      <a
-        class="wishlist"
-        href="../../pdf/FundingRequestLetter.pdf"
-        download
-        ><img src="../../src/components/icons/PDF_file_icon.svg" />Funding
+      <a class="wishlist" href="../../pdf/FundingRequestLetter.pdf" download>
+        <!-- the link on the deployed version goes to "public/pdf..." -->
+        <img src="../../src/components/icons/PDF_file_icon.svg" />Funding
         Request Letter
       </a>
     </section>
