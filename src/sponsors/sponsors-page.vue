@@ -18,7 +18,7 @@ import SponsorsLogos from "../../src/components/SponsorsLogos.vue";
       </p>
       <a
         class="wishlist"
-        href="../../src/assets/pdf/Wishlist_globale.pdf"
+        href="../../pdf/Wishlist.pdf"
         download
         ><img src="../../src/components/icons/PDF_file_icon.svg" />See our
         Wishlist PDF
@@ -45,14 +45,14 @@ import SponsorsLogos from "../../src/components/SponsorsLogos.vue";
     <section class="docs">
       <a
         class="wishlist"
-        href="../../src/assets/pdf/Sponsorship_file.pdf"
+        href="../../pdf/Sponsorship_file.pdf"
         download
         ><img src="../../src/components/icons/PDF_file_icon.svg" />Sponsorship
-        File (FR)
+        File
       </a>
       <a
         class="wishlist"
-        href="../../src/assets/pdf/Stan Robotix - Funding Request letter.pdf"
+        href="../../pdf/FundingRequestLetter.pdf"
         download
         ><img src="../../src/components/icons/PDF_file_icon.svg" />Funding
         Request Letter
