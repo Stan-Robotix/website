@@ -1,50 +1,96 @@
-<script setup>
+<script setup></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll('.subteam');
 
-</script>
+  cards.forEach(card => {
+    const image = card.querySelector('.image');
+    const subteamName = card.querySelector('.subteamName');
+    const subteamExplanation = card.querySelector('.subteamExplanation');
+    // const button = card.querySelector('.button')
+    const arrow = card.querySelector('.arrow')
+
+    function toggleText() {
+      if (subteamExplanation.style.maxHeight === '0px') 
+      {
+        // Affiche le texte et tourne la flèche
+        subteamExplanation.style.maxHeight = '60%';
+        image.style.maxHeight = "20%"
+        arrow.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+      } 
+      else 
+      {
+        // Cache le texte et retourne la flèche
+        subteamExplanation.style.maxHeight = '0px';
+        image.style.maxHeight = "80%"
+        arrow.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
+      }
+    }
+
+    // button.addEventListener('click', toggleText);
+    subteamName.addEventListener('click', toggleText);
+  });
+});</script>
 
 <template>
     <main>
-        <h2>Subteams</h2>
-        <p>
-            <!-- explication des subteams-->
-        </p>
+        <!-- <p>
+            explication des subteams
+        </p> -->
         <ul>
-            <li class="programming">
+            <li class="programming subteam">
                 <div class = "image"></div>
-                <div class = "texte">
-                    Programming&nbsp;<i class="fa-solid fa-chevron-up"></i>
+                <div class = "subteamName">
+                    <p>Programming&nbsp;<span class = "arrow"><i class="fa-solid fa-chevron-up"></i></span></p>
+                </div>
+                <div class = "subteamExplanation">
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Sed leo nascetur integer facilisis accumsan aliquet elementum phasellus vitae. Tempus dis mauris integer nostra hac. Metus porta lacus ultricies fermentum mollis curabitur pharetra risus. Nam nullam class imperdiet iaculis felis taciti fringilla porta. Congue taciti leo bibendum feugiat tristique. Nam dictumst id ligula at scelerisque ex euismod. Imperdiet nisl natoque varius mauris quisque. Consequat lacinia nascetur tellus dignissim nibh, dolor neque eleifend.
                 </div>
             </li>
-            <li class="SND">
+            <li class="SND subteam">
                 <div class = "image"></div>
-                <div class = "texte">
-                    SnD&nbsp;<i class="fa-solid fa-chevron-up"></i>
+                <div class = "subteamName">
+                    <p>SnD&nbsp;<span class = "arrow"><i class="fa-solid fa-chevron-up"></i></span></p>
+                </div>
+                <div class = "subteamExplanation">
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Sed leo nascetur integer facilisis accumsan aliquet elementum phasellus vitae. Tempus dis mauris integer nostra hac. Metus porta lacus ultricies fermentum mollis curabitur pharetra risus. Nam nullam class imperdiet iaculis felis taciti fringilla porta. Congue taciti leo bibendum feugiat tristique. Nam dictumst id ligula at scelerisque ex euismod. Imperdiet nisl natoque varius mauris quisque. Consequat lacinia nascetur tellus dignissim nibh, dolor neque eleifend.
                 </div>
             </li>
-            <li class="construction">
+            <li class="construction subteam">
                 <div class = "image"></div>
-                <div class = "texte">
-                    Construction&nbsp;<i class="fa-solid fa-chevron-up"></i>
+                <div class = "subteamName">
+                    <p>Construction&nbsp;<span class = "arrow"><i class="fa-solid fa-chevron-up"></i></span></p>
+                </div>
+                <div class = "subteamExplanation">
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Sed leo nascetur integer facilisis accumsan aliquet elementum phasellus vitae. Tempus dis mauris integer nostra hac. Metus porta lacus ultricies fermentum mollis curabitur pharetra risus. Nam nullam class imperdiet iaculis felis taciti fringilla porta. Congue taciti leo bibendum feugiat tristique. Nam dictumst id ligula at scelerisque ex euismod. Imperdiet nisl natoque varius mauris quisque. Consequat lacinia nascetur tellus dignissim nibh, dolor neque eleifend.
                 </div>
             </li>
-            <li class="marketing">
+            <li class="marketing subteam">
                 <div class = "image"></div>
-                <div class = "texte">
-                    Marketing&nbsp;<i class="fa-solid fa-chevron-up"></i>
+                <div class = "subteamName">
+                    <p>Marketing&nbsp;<span class = "arrow"><i class="fa-solid fa-chevron-up"></i></span></p>
+                </div>
+                <div class = "subteamExplanation">
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Sed leo nascetur integer facilisis accumsan aliquet elementum phasellus vitae. Tempus dis mauris integer nostra hac. Metus porta lacus ultricies fermentum mollis curabitur pharetra risus. Nam nullam class imperdiet iaculis felis taciti fringilla porta. Congue taciti leo bibendum feugiat tristique. Nam dictumst id ligula at scelerisque ex euismod. Imperdiet nisl natoque varius mauris quisque. Consequat lacinia nascetur tellus dignissim nibh, dolor neque eleifend.
                 </div>
             </li>
-            <li class="medias">
+            <li class="medias subteam">
                 <div class = "image"></div>
-                <div class = "texte">
-                    Medias&nbsp;<i class="fa-solid fa-chevron-up"></i>
+                <div class = "subteamName">
+                    <p>Medias&nbsp;<span class = "arrow"><i class="fa-solid fa-chevron-up"></i></span></p>
+                </div>
+                <div class = "subteamExplanation">
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Sed leo nascetur integer facilisis accumsan aliquet elementum phasellus vitae. Tempus dis mauris integer nostra hac. Metus porta lacus ultricies fermentum mollis curabitur pharetra risus. Nam nullam class imperdiet iaculis felis taciti fringilla porta. Congue taciti leo bibendum feugiat tristique. Nam dictumst id ligula at scelerisque ex euismod. Imperdiet nisl natoque varius mauris quisque. Consequat lacinia nascetur tellus dignissim nibh, dolor neque eleifend.
                 </div>
             </li>
-            <li class="design">
+            <li class="design subteam">
                 <div class = "image"></div>
-                <div class = "texte">
-                    Design&nbsp;<i class="fa-solid fa-chevron-up"></i>
+                <div class = "subteamName">
+                    <p>Design&nbsp;<span class = "arrow"><i class="fa-solid fa-chevron-up"></i></span></p>
                 </div>
-                
+                <div class = "subteamExplanation">
+                    Lorem ipsum odor amet, consectetuer adipiscing elit. Sed leo nascetur integer facilisis accumsan aliquet elementum phasellus vitae. Tempus dis mauris integer nostra hac. Metus porta lacus ultricies fermentum mollis curabitur pharetra risus. Nam nullam class imperdiet iaculis felis taciti fringilla porta. Congue taciti leo bibendum feugiat tristique. Nam dictumst id ligula at scelerisque ex euismod. Imperdiet nisl natoque varius mauris quisque. Consequat lacinia nascetur tellus dignissim nibh, dolor neque eleifend.
+                </div>
             </li>
         </ul>
     </main>
@@ -52,14 +98,6 @@
 
 <style scoped lang="scss">
 @import "../assets/base.scss";
-
-main {
-    font-family: Inter, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;;
-}
-
-h2 {
-    text-align: center;
-}
 
 ul {
     display: flex;
@@ -74,65 +112,87 @@ ul {
 
 li {
     background-color: $secondary;
+    display: flex;
     list-style: none;
     width: 25vw;
     height: 40vh;
-    text-align: center;
-    margin: auto;
     border-radius: 10px;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    transition: 0.5s ease-in-out;
 }
 
-li div {
-    height: 80%;
-    border-radius: 10px;
+li * {
+    border-radius: inherit;
+    transition: inherit;
 }
 
 .design .image {
-    background-image: url("images/Subteams_images/DesignTeam_Picture.jpg");
+    background-image: url("images/Subteams_images_Temp/DesignTeam_Picture.jpg");
 }
 
 .programming .image {
-    background-image: url("images/Subteams_images/ProgTeam_Picture.jpg");
+    background-image: url("images/Subteams_images_Temp/ProgTeam_Picture.jpg");
 }
 
 .medias .image {
-    background-image: url("images/Subteams_images/MediasTeam_Picture.jpg");
+    background-image: url("images/Subteams_images_Temp/MediasTeam_Picture.jpg");
 }
 
 .construction .image {
-    background-image: url("images/Subteams_images/ConstructionTeam_Picture.jpg");
+    background-image: url("images/Subteams_images_Temp/ConstructionTeam_Picture.jpg");
 }
 
 .SND .image {
-    background-image: url("images/Subteams_images/SnDTeam_Picture.jpg");
+    background-image: url("images/Subteams_images_Temp/SnDTeam_Picture.jpg");
 }
 
 .marketing .image {
-    background-image: url("images/Subteams_images/MarketingTeam_Picture.jpg");
+    background-image: url("images/Subteams_images_Temp/MarketingTeam_Picture.jpg");
 }
 
 .image {
+    max-height: 80%;
+    height: 100%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: 1;
 }
 
-.design p {
-    margin: 0;
-    height: 20%;
-}
-
-.texte {
+.subteamName {
     display: flex;
-    height: 20%;
+    max-height: 20%;
+    height: 100%;
     background-color: $secondary;
     color: $text;
     align-items: center;
     justify-content: center;
-    //bouton qui ouvre une explication de la subteam
+    z-index: 2;
 }
 
-.texte :hover {
-    cursor: pointer;
+.subteamExplanation {
+    max-height: 0px;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
 }
+
+p {
+    width: 100%;
+    color: $text;
+    cursor: pointer;
+    text-align: center;
+    padding: calc(4vh - 12px) 0;
+
+    .arrow {
+        color: $accent;
+    }
+}
+
+p:hover {
+    color: $accent;
+    font-weight: 500;
+}
+
 </style>
